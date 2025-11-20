@@ -14,9 +14,9 @@ run:
 	@go run cmd/main.go
 
 db-up:
-	@go run cmd/migrate/main.go up
+	@go run cmd/migrate/main.go -op up
 db-down:
-	@go run cmd/migrate/main.go down
+	@go run cmd/migrate/main.go -op down
 # Create DB container
 docker-run:
 	@docker compose up --build
