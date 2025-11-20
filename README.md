@@ -32,41 +32,50 @@ The project follows a **service-oriented layered architecture**:
 - **AnnualEmissions**: emissions per activity per city per year.
 - **Budget Projection**: calculated remaining budget after subtracting annual emissions year-by-year.
 
-
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## MakeFile
 
+Use the `Makefile` convenience target to start containers, run migrations and launch the API in one step:
+
+```powershell
+# start DB, run migrations, then run the app (uses the project's Makefile)
+
+make all
+```
+
+If you prefer to run the steps manually (or debug startup), these are the equivalent commands:
+
 Create DB container 
 
-```bash
+```powershell
 make docker-run
 ```
 Create database and seed it  
 
-```bash
+```powershell
 make db-up
 ```
 
 Run the application
-```bash
+```powershell
 make run
 ```
 
 Remove database 
 
-```bash
+```powershell
 make db-down
 ```
 
 Shutdown DB Container
 
-```bash
+```powershell
 make docker-down
 ```
+
 
 ## API Routes
 
